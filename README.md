@@ -1,7 +1,7 @@
 # Auth API with Cloudflare Workers
 
 ## Start Project
-1. Add env file
+1. Add env file and set CLOUDFLARE_ACCOUNT_ID
     ```bash
     cp .env.example .env
     ```

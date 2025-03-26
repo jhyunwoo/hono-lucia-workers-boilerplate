@@ -14,12 +14,13 @@
     ```bash
     wrangler d1 create DB_NAME
     ```
-4. Add DB info on wrangler.jsonc
-5. Generate SQL
+4. Add DB info on wrangler.jsonc and add DB info on .env file
+5. Change name on wrangler.jsonc and package.json
+6. Generate SQL
     ```bash
     bun db:generate
     ```
-6. Migrate SQL
+7. Migrate SQL
     ```bash
     bun db:migrate
     ```

@@ -8,6 +8,8 @@ export const users = sqliteTable("users", {
     .$defaultFn(() => generateId(15)),
   email: text("email").notNull().unique(),
   password: text("password").notNull(),
+  name: text("name").notNull(),
+  createdAt: text("createdAt").$defaultFn(() => String(new Date())),
 });
 
 export const sessions = sqliteTable("sessions", {

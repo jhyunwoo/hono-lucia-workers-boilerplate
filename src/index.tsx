@@ -1,11 +1,11 @@
 import { Hono } from "hono";
-import { Bindings } from "./bindings";
+import { Bindings } from "./lib/bindings";
 import auth from "./auth";
 
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.get("/", (c) => {
-  return c.render(<h1>Hello!</h1>);
+  return c.json({ result: "Auth API is Healthy" });
 });
 
 app.route("/auth", auth);
